@@ -4,7 +4,7 @@ from player import Player
 
 
 def main():
-    pygame.init
+    pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     screen_clock = pygame.time.Clock()
     dt = 0
@@ -15,6 +15,7 @@ def main():
                 return
         screen.fill(000000)
         User_Player.draw(screen)
+        User_Player.update(dt)
         pygame.display.flip()
         dt = screen_clock.tick(60)/1000
 
