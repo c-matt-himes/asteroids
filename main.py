@@ -24,6 +24,9 @@ def main():
                 return
         screen.fill(000000)
         Updatable_group.update(dt)
+        for asteroid in Asteroid_group:
+            if asteroid.collision(User_Player):
+                raise Exception("Game over!")
         for item in Drawable_group:
             item.draw(screen)
         pygame.display.flip()
