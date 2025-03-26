@@ -30,7 +30,6 @@ def main():
         for asteroid in Asteroid_group:
             if asteroid.collision(User_Player):
                 raise Exception("Game over!")
-        for asteroid in Asteroid_group:
             for shot in Shot_group:
                 if asteroid.collision(shot):
                     shot.kill()
